@@ -1,0 +1,21 @@
+img {
+    width: 100%;
+    height: auto;
+}
+
+.btn {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stretched-link {
+    z-index: 100;
+}
+
+section + section {
+    margin-top: 35px;
+}
+
+.container > .row + .row {
+    margin-top: 2rem;
+}
