@@ -267,18 +267,16 @@
     .testimonial-wrapper {
         display: flex;
         flex-direction: column;
-     
+        font-size: 0.875rem;
 
         .testimonial {
             @include truncate(4, true);
-            font-size: 0.75rem;
         }
 
         .client-name {
             font-weight: bold;
             font-family: $font-family-second;
             margin-top: 10px;
-            font-size: 0.875rem;
         }
     }
 }
