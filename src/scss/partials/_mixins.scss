@@ -1,0 +1,19 @@
+@mixin truncate($text-lines: 3, $static-height: false) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $text-lines;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    line-height: 1.2em;
+
+    @if $static-height == true {
+        height: 1.2em * $text-lines;
+    } @else {
+        max-height: 1.2em * $text-lines;
+    }
+
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}

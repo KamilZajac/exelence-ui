@@ -9,17 +9,18 @@ var swiper = new Swiper('.banner-swiper', {
         delay: 3000,
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '#bannerSwiperNext',
+        prevEl: '#bannerSwiperPrev',
     },
 });
 
+// be aware that the every carousel should have specific button selector
 var listingSwiper1 = new Swiper('.products-listing-swiper', {
     spaceBetween: 25,
     loop: true,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '#productSwiperNext1',
+        prevEl: '#productSwiperPrev1',
     },
     breakpoints: {
         1200: {
@@ -41,16 +42,13 @@ var listingSwiper1 = new Swiper('.products-listing-swiper', {
 });
 
 var testimonialsSwiper = new Swiper('.testimonials-swiper', {
-    spaceBetween: 3,
+    spaceBetween: 25,
     loop: true,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '#testimonialSwiperNext',
+        prevEl: '#testimonialSwiperPrev',
     },
     breakpoints: {
-        1200: {
-            slidesPerView: 4,
-        },
         992: {
             slidesPerView: 3,
         },
@@ -65,3 +63,4 @@ var testimonialsSwiper = new Swiper('.testimonials-swiper', {
         },
     },
 });
+
