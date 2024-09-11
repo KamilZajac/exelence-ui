@@ -13,9 +13,13 @@ img {
 }
 
 section + section {
-    margin-top: 35px;
+    // margin-top: 35px;
 }
 
 .container > .row + .row {
     margin-top: 2rem;
+}
+
+h1, h2 {
+    font-family: $font-family-second;
 }
