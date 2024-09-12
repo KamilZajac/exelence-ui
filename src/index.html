@@ -16,34 +16,54 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <title>Jewelery</title>
     </head>
     <body>
         <header>
-            <div class="top-bar">
+            <nav class="navbar navbar-expand-lg bg-secondary">
                 <div class="container">
-                    <div class="col-12">
-                        <div class="top-bar-content">
-                            <div>
-                                <a href="#">Hurtownia</a> | Infolinia
-                                <a href="tel:+">+48 123 123 132</a>
-                            </div>
-                            <div class="cta-title">
-                                Darmowa wysyłka powyżej xxx zł
-                            </div>
-                            <div class="login-wrapper">
-                                <a href="">Logowanie</a>
-                                <a href="">Rejestracja</a>
-                            </div>
+                    <div class="d-none d-lg-block">
+                        <a href="#">Hurtownia</a> | Infolinia
+                        <a href="tel:+">+48 123 123 132</a>
+                    </div>
+                    <div class="cta-title">
+                        Darmowa wysyłka powyżej xxx zł
+                    </div>
+                    <button
+                        class="navbar-toggler ms-auto"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                    >
+                        <div class="d-block d-lg-none mb-2">
+                            <a href="#">Hurtownia</a> | Infolinia
+                            <a href="tel:+">+48 123 123 132</a>
                         </div>
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-solid fa-user me-1"></i> Logowanie</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i> Rejestracja</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="header-central">
+            </nav>
+            <div class="container header-main">
+                <div class="row gy-4">
+                    <div class="col-lg-4 order-3 order-lg-1">
+                        <div class="col-content-wrapper">
                             <div class="search-box">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 <input
@@ -53,59 +73,58 @@
                                     placeholder="Napisz czego szukasz"
                                 />
                             </div>
-
-                            <div class="logo">
-                                <img
-                                    src="https://via.placeholder.com/100x50"
-                                    alt="Logo"
-                                />
-                            </div>
-
-                            <div class="header-links">
-                                <a href="#">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="35.865"
-                                        height="33.071"
-                                        viewBox="0 0 35.865 33.071"
-                                    >
-                                        <g
-                                            id="heart"
-                                            transform="translate(1 1)"
-                                        >
-                                            <path
-                                                id="Path_1"
-                                                data-name="Path 1"
-                                                d="M24.815,0a9.042,9.042,0,0,0-7.882,4.613A9.042,9.042,0,0,0,9.05,0C4.052,0,0,4.636,0,9.634,0,22.187,16.932,30.946,16.932,30.946S33.865,22.187,33.865,9.634C33.865,4.636,29.813,0,24.815,0Zm0,0"
-                                                transform="translate(0 0)"
-                                                fill="none"
-                                                stroke="#ce3131"
-                                                stroke-width="2"
-                                            />
-                                        </g>
-                                    </svg>
-
-                                    <span>Ulubione</span>
-                                </a>
-                                <a href="#" class="cart">
-                                    <img src="./img/bag-6.png" alt="bag-icon" />
-                                    <span>0.00 PLN</span>
-                                    <span class="cart-quantity">3</span>
-                                </a>
-                            </div>
                         </div>
                     </div>
-
-                    <div class="col-12">
-                        <nav class="menu-container">
-                            <a href="#">O nas</a>
-                            <a href="#">Blog</a>
-                            <a href="#">Kontakt</a>
-                            <a href="#" class="special">Promocje</a>
-                            <a href="#" class="special">Nowości</a>
-                            <a href="#">Dla Kogo</a>
-                        </nav>
+                    <div class="col-4 col-lg-4 order-2">
+                        <div class="col-content-wrapper logo-wrapper">
+                            <img
+                                src="https://via.placeholder.com/100x50"
+                                alt="Logo"
+                            />
+                        </div>
                     </div>
+                    <div class="col-8 col-lg-4 order-2 order-lg-3">
+                        <div class="col-content-wrapper header-links">
+                            <a href="#">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="35.865"
+                                    height="33.071"
+                                    viewBox="0 0 35.865 33.071"
+                                >
+                                    <g id="heart" transform="translate(1 1)">
+                                        <path
+                                            id="Path_1"
+                                            data-name="Path 1"
+                                            d="M24.815,0a9.042,9.042,0,0,0-7.882,4.613A9.042,9.042,0,0,0,9.05,0C4.052,0,0,4.636,0,9.634,0,22.187,16.932,30.946,16.932,30.946S33.865,22.187,33.865,9.634C33.865,4.636,29.813,0,24.815,0Zm0,0"
+                                            transform="translate(0 0)"
+                                            fill="none"
+                                            stroke="#ce3131"
+                                            stroke-width="2"
+                                        />
+                                    </g>
+                                </svg>
+
+                                <span>Ulubione</span>
+                            </a>
+                            <a href="#" class="cart">
+                                <img src="./img/bag-6.png" alt="bag-icon" />
+                                <span>0.00 PLN</span>
+                                <span class="cart-quantity">3</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12"></div>
+                    <nav class="menu-container">
+                        <a href="#">O nas</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Kontakt</a>
+                        <a href="#" class="special">Promocje</a>
+                        <a href="#" class="special">Nowości</a>
+                        <a href="#">Dla Kogo</a>
+                    </nav>
                 </div>
             </div>
         </header>
@@ -901,12 +920,14 @@
 
                         <div class="social-media">
                             <div class="mb-2">Śledz nas!</div>
-                            <a href=""
-                                ><i class="fa-brands fa-facebook-f"></i
-                            ></a>
-                            <a href=""
-                                ><i class="fa-brands fa-instagram"></i
-                            ></a>
+                            <div class="d-flex gap-2">
+                                <a href=""
+                                    ><i class="fa-brands fa-facebook-f"></i
+                                ></a>
+                                <a href=""
+                                    ><i class="fa-brands fa-instagram"></i
+                                ></a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-2">

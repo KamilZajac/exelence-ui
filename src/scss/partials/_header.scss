@@ -1,11 +1,30 @@
 header {
-    .top-bar {
+    .navbar {
         margin-bottom: 20px;
-        background-color: $secondary;
         color: white;
+
+        .container {
+            justify-content: space-between;
+            align-items: center;
+            row-gap: 20px;
+        }
+
+        .navbar-collapse {
+            align-items: center;
+        }
+
+        .navbar-toggler {
+            border-color: white;
+        }
 
         a {
             color: white;
+        }
+
+        @include media-breakpoint-up(lg) {
+            .navbar-collapse {
+                flex: unset;
+            }
         }
     }
 
@@ -20,6 +39,14 @@ header {
     .cta-title {
         font-size: 1.375rem;
         font-weight: 600;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 1rem;
+        }
+
+        @media screen and (max-width: 380px) {
+            font-size: 0.75rem;
+        }
     }
 
     .login-wrapper {
@@ -27,17 +54,14 @@ header {
         gap: 20px;
     }
 
-    .header-central {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 0;
+    .header-main {
         margin-bottom: 20px;
 
         .search-box {
             display: flex;
             align-items: center;
             gap: 15px;
+            width: 100%;
 
             img {
                 width: 20px;
@@ -46,17 +70,23 @@ header {
 
             input {
                 border: none;
-                width: 300px;
+                // width: 300px;
             }
         }
 
-        .logo img {
-            width: 100%;
-            max-width: 130px;
+        .logo-wrapper {
+            img {
+                width: 100%;
+                max-width: 130px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                justify-content: center;
+            }
         }
 
         .header-links {
-            display: flex;
+            justify-content: flex-end;
             align-items: center;
 
             a {
@@ -84,7 +114,7 @@ header {
             position: relative;
 
             .cart-quantity {
-                bottom: 22px;
+                top: 15px;
                 right: 14px;
                 position: absolute;
                 width: 16px;
