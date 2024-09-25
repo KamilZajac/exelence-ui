@@ -2,6 +2,7 @@ import * as bootstrap from 'bootstrap';
 import '../scss/main.scss';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
+import './megamenu'
 
 var swiper = new Swiper('.banner-swiper', {
     loop: true,
